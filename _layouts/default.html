@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="chrome=1">
+        <meta charset="utf-8">
+        <title>{{ page.title }}</title>
+        <link rel="shortcut icon" href="/images/rocket.png">
+        <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+        <link href="/font-awesome/css/font-awesome.min.css" rel="stylesheet" media="screen">
+        <style>
+        body {
+            padding-top: 60px;
+        }
+        </style>
+    </head>
+    <body>
+        <div class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="brand" href="http://lektor.io/"><i class="icon-rocket icon-large" style="color: rgba(50, 181, 255, 0.5); text-shadow: 0 1px rgba(255,255,255,0.9);"></i> Lektor</a>
+                    <div class="pull-right">
+                        <a href="http://lektor.io/register" class="btn btn-primary">Register</a>
+                        <a href="http://lektor.io/signin" class="btn">Sign in</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            {{ content }} 
+
+            <div class="row footer">
+                <p class="muted pull-left">&copy; 2013 Lektor</p>
+                <p class="pull-right">
+                    <a href="">Blog</a>
+                    &middot;
+                    <a href="">Twitter</a>
+                </p>
+            </div>
+        </div>
+        <script src="/bootstrap/js/bootstrap.min.js"></script>
+   </body>
+</html>
