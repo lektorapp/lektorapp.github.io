@@ -1,0 +1,25 @@
+---
+layout: nil
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title type="text" xml:lang="en">{{ site.root_desc }}</title>
+    <link type="application/atom+xml" href="http://poit.ch/feed/" rel="self"/>
+    <link type="text" href="http://poit.ch" rel="alternate"/>
+    <updated>{{ site.time | date_to_xmlschema }}</updated>
+    <id>http://poit.ch</id>
+    <author>
+        <name>Jérôme Poichet</name>
+    </author>
+    <rights>Copyright (c) 2005-2013, Jérôme Poichet; all rights reserved.</rights>
+
+    {% for post in site.posts limit:20 %}
+    <entry>
+        <title>{{ post.title }}</title>
+        <link href="http://poit.ch{{ post.url }}"/>
+        <updated>{{ post.date | date_to_xmlschema }}</updated>
+        <id>http://poit.ch{{ post.id }}</id>
+        <content type="html">{{ post.content | xml_escape }}</content>
+    </entry>
+    {% endfor %}
+</feed>
